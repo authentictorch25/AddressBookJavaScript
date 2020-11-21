@@ -185,3 +185,17 @@ function GetCountByState(state) {
 }
 console.log("Number of in Shimla : " + GetCountByCity('Shimla'));
 console.log("Number of in Delhi : " + GetCountByState('Delhi'));
+///////
+
+function compare(a,b){
+    if((a.firstName+a.lastName)<(b.firstName+b.lastName)){
+        return -1;
+    }else if((a.firstName+a.lastName)>(b.firstName+b.lastName)){
+        return 1;
+    }else return 0;
+}
+function SortContactsByName(){
+    contactarray = contactarray.sort(compare);
+}
+SortContactsByName();
+console.log(contactarray);
