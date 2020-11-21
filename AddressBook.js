@@ -176,3 +176,12 @@ function ViewContactByState(state) {
 }
 ViewContactByCity("Shimla");
 ViewContactByState("Delhi");
+///////////
+function GetCountByCity(city) {
+    return contactarray.filter(obj => obj.city == city).reduce((countOfContact, obj) => countOfContact += 1, 0);
+}
+function GetCountByState(state) {
+    return contactarray.filter(obj => obj.state == state).reduce((countOfContact, obj) => countOfContact += 1, 0);
+}
+console.log("Number of in Shimla : " + GetCountByCity('Shimla'));
+console.log("Number of in Delhi : " + GetCountByState('Delhi'));
