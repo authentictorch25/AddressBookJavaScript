@@ -122,3 +122,20 @@ if (indexOfContact != -1) {
 }
 
 console.log(contactarray);
+
+
+try {
+    AddContact('Sukanya', 'Singh', 'VindhyaNagar', 'Singrauli', 'MadhyaPradesh', '486886', '9288009922', 'sukanya@gmail.com');
+} catch (e) {
+    console.error(e);
+}
+function DeleteContact(firstName,lastName){
+    contactarray = contactarray.filter(obj=>obj.firstName!=firstName && obj.lastName!=lastName);
+}
+
+console.log('Added Sukanaya in contact array');
+console.log(contactarray);
+console.log('After deletion process')
+DeleteContact('Sukanya','Singh');
+console.log('contactarray after delete ');
+console.log(contactarray);
