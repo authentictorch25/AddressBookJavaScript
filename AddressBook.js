@@ -95,9 +95,14 @@ get firstName() { return this._firstName; }
 }
 let contactarray = new Array();
 function AddContact(firstName, lastName, address, city, state, zip, phoneNumber, email) {
+    if(contactarray.some(obj=>obj.firstName==firstName && obj.lastName==lastName)){
+        console.log("Contact with firstName: "+firstName+" and lastName: "+lastName+" already exist!");
+        return;
+    }
     let contact = new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
     contactarray.push(contact);
 }
+
 try {
     AddContact('Akash', 'Singh', 'Mumbai', 'Shimla', 'Himachal', '489568', '9288009922', 'akash@gmail.com');
     AddContact('Namrata', 'Yadav', 'Delhi', 'Bangalore', 'Delhi', '456987', '8887776665', 'namrata@gmail.com');
@@ -142,3 +147,4 @@ console.log(contactarray);
 ///////
 let countOfContact = contactarray.reduce((countOfContact, contact) => countOfContact += 1, 0);
 console.log("Number of contacts: " + countOfContact);
+////
