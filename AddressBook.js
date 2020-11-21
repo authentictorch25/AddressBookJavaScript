@@ -166,3 +166,13 @@ function SearchbyState(firstName, lastName, state) {
 }
 console.log(SearchbyCity('Akash', 'Pratap','Shimla'));
 console.log(SearchbyState('Namrata', 'Yadav', 'Delhi'));
+/////
+
+function ViewContactByCity(city) {
+    console.log(contactarray.filter(obj => obj.city == city));
+}
+function ViewContactByState(state) {
+    console.log(contactarray.filter(obj => obj.state == state));
+}
+ViewContactByCity("Shimla");
+ViewContactByState("Delhi");
