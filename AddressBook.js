@@ -145,6 +145,24 @@ DeleteContact('Sukanya','Singh');
 console.log('contactarray after delete ');
 console.log(contactarray);
 ///////
+
+
 let countOfContact = contactarray.reduce((countOfContact, contact) => countOfContact += 1, 0);
 console.log("Number of contacts: " + countOfContact);
 ////
+
+
+function SearchbyCity(firstName, lastName, city) {
+    if (contactarray.some(obj => obj.firstName == firstName && obj.lastName == lastName && obj.city == city)) {
+        return true;
+    }
+    return false;
+}
+function SearchbyState(firstName, lastName, state) {
+    if (contactarray.some(obj => obj.firstName == firstName && obj.lastName == lastName && obj.state == state)) {
+        return true;
+    }
+    return false;
+}
+console.log(SearchbyCity('Akash', 'Pratap','Shimla'));
+console.log(SearchbyState('Namrata', 'Yadav', 'Delhi'));
