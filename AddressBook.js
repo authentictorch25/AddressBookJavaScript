@@ -122,7 +122,7 @@ if (indexOfContact != -1) {
 }
 
 console.log(contactarray);
-
+//////
 
 try {
     AddContact('Sukanya', 'Singh', 'VindhyaNagar', 'Singrauli', 'MadhyaPradesh', '486886', '9288009922', 'sukanya@gmail.com');
@@ -139,3 +139,6 @@ console.log('After deletion process')
 DeleteContact('Sukanya','Singh');
 console.log('contactarray after delete ');
 console.log(contactarray);
+///////
+let countOfContact = contactarray.reduce((countOfContact, contact) => countOfContact += 1, 0);
+console.log("Number of contacts: " + countOfContact);
