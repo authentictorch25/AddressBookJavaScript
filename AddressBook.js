@@ -104,4 +104,21 @@ try {
 } catch (exception) {
     console.error(exception);
 }
+
+
+
+function GetIndexByName(firstName, lastName) {
+    for (let i = 0; i < contactarray.length; i++) {
+        if (contactarray[i]._firstName == firstName && contactarray[i]._lastName == lastName) {
+            return i;
+        }
+    }
+    return -1;
+}
+let indexOfContact = GetIndexByName('Akash', 'Singh');
+if (indexOfContact != -1) {
+    contactarray[indexOfContact].firstName = 'Akash';
+    contactarray[indexOfContact].lastName = 'Pratap';
+}
+
 console.log(contactarray);
