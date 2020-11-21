@@ -93,3 +93,15 @@ get firstName() { return this._firstName; }
         }
     }
 }
+let contactarray = new Array();
+function AddContact(firstName, lastName, address, city, state, zip, phoneNumber, email) {
+    let contact = new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
+    contactarray.push(contact);
+}
+try {
+    AddContact('Akash', 'Singh', 'Mumbai', 'Shimla', 'Himachal', '489568', '9288009922', 'akash@gmail.com');
+    AddContact('Namrata', 'Yadav', 'Delhi', 'Bangalore', 'Delhi', '456987', '8887776665', 'namrata@gmail.com');
+} catch (exception) {
+    console.error(exception);
+}
+console.log(contactarray);
